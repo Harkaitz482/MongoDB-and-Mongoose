@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 let Person;
 
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(process.env.MONGO_URL);
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
 };
