@@ -32,11 +32,7 @@ var createAndSavePerson = function(done) {
 };
 
 
-  // Saving the instance to the database
-  personInstance.save((err, data) => {
-    if (err) return done(err);
-    done(null, data); // Callback function with the created document
-  });
+
 
 
 
