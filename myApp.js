@@ -22,12 +22,20 @@ const Person = mongoose.model('Person', personSchema);
 
 
 
-var createAndSavePerson = function(done) {
-  var janeFonda = new Person({name: "Jane Fonda", age: 84, favoriteFoods: ["eggs", "fish", "fresh fruit"]});
+const createAndSavePerson = (done) => {
+  const personInstance = new Person({
+    name: 'Alejandro', 
+    age: 30,         
+    favoriteFoods: ['potaje de lentejas', 'pasta'] 
+  });
 
-  janeFonda.save(function(err, data) {
-    if (err) return console.error(err);
-    done(null, data)
+  // Save the document instance to the database
+  personInstance.save(function(err, data) {
+    if (err) {
+      done(err, null);
+    } else {
+      done(null, data);
+    }
   });
 };
 
