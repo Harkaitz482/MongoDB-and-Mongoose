@@ -24,8 +24,8 @@ const Person = mongoose.model('Person', personSchema);
 
 const createAndSavePerson = (done) => {
   const personInstance = new Person({
-    name: 'Alejandro', 
-    age: 30,         
+    name: 'harka', 
+    age: 18,         
     favoriteFoods: ['potaje de lentejas', 'pasta'] 
   });
 
